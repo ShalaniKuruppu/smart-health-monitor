@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Patient</title>
+</head>
+<body>
+    <h1>Add Patient</h1>
+    <form action="#" th:action="@{/patients/save}" th:object="${patient}" method="post">
+        Name: <input type="text" th:field="*{name}" /><br/>
+        Age: <input type="number" th:field="*{age}" /><br/>
+        Email: <input type="email" th:field="*{email}" /><br/>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
